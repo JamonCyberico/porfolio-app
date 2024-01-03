@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
-import { EnvelopeIcon, DocumentTextIcon } from '@heroicons/react/24/outline'
+import { EnvelopeIcon, IdentificationIcon } from '@heroicons/react/24/outline'
 import { FaLinkedin, FaGithub } from 'react-icons/fa' 
 
 const Navbar = () => {
@@ -34,33 +34,31 @@ const Navbar = () => {
         <li className='cursor-pointer'>Contact</li>
       </ul>
 
-      <div className='hidden md:flex fixed left-0 top-[35%]'>
-        <ul>
-          <li className='h-[60px] flex justify-between w-[160px] duration-300 bg-white ml-[-110px] hover:ml-[-10px] bg-[#0077b5]'>
-            <a href='https://www.linkedin.com/in/anthonyajami/' target='blank' className='flex justify-center items-center w-full gap-10 px-4 font-semibold'>
-              <span>LinkedIn</span>
-              <FaLinkedin className='w-8 h-8 '/>
-            </a>
-          </li>
-          <li className='h-[60px] flex justify-between w-[160px] duration-300 bg-white ml-[-110px] hover:ml-[-10px] bg-[#c9510c]'>
-            <a href='/' className='flex justify-center items-center w-full gap-10 px-4 font-semibold'>
-              <span>Github</span>
-              <FaGithub className='ml-4 w-10 h-10'/>
-            </a>
-          </li>
-          <li className='h-[60px] flex justify-between w-[160px] duration-300 bg-white ml-[-110px] hover:ml-[-10px] bg-[#3f00b5]'>
-            <a href='/' className='flex justify-center items-center w-full gap-10 px-4 font-semibold'>
-              <span>LinkedIn</span>
-              <EnvelopeIcon className='w-8 h-8 '/>
-            </a>
-          </li>
-          <li className='h-[60px] flex justify-between w-[160px] duration-300 bg-white ml-[-110px] hover:ml-[-10px] bg-pink-700'>
-            <a href='/' className='flex justify-center items-center w-full gap-10 px-4 font-semibold'>
-              <span>LinkedIn</span>
-              <DocumentTextIcon className='w-8 h-8 '/>
-            </a>
-          </li>
-        </ul>
+      <div className='hidden fixed md:flex flex-col top-[35%] left-0'>
+        <div className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0A66C2]'>
+          <a href='https://www.linkedin.com/in/anthonyajami/' target='blank' className='flex justify-center items-center w-full text-white font-normal text-base px-4'>
+            <span>LinkedIn</span>
+            <FaLinkedin className='h-[30px] w-[30px] ml-auto' />
+          </a>
+        </div>
+        <div className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#c9510c]'>
+          <a href='/' className='flex justify-center items-center w-full text-white font-normal text-base px-4'>
+            <span>Github</span>
+            <FaGithub className='h-[30px] w-[30px] ml-auto' />
+          </a>
+        </div>
+        <div className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#51A0D5]'>
+          <a href='/' className='flex justify-center items-center w-full text-white font-normal text-base px-4'>
+            <span>Contact</span>
+            <EnvelopeIcon className='h-[30px] w-[30px] ml-auto' />
+          </a>
+        </div>
+        <div className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#9e9d9d]'>
+          <a href='/' className='flex justify-center items-center w-full text-white font-normal text-base px-4'>
+            <span>Resume</span>
+            <IdentificationIcon className='h-[30px] w-[30px] ml-auto' />
+          </a>
+        </div>
       </div>
     </div>
   )
