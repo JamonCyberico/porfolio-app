@@ -3,11 +3,13 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import { EnvelopeIcon, IdentificationIcon } from '@heroicons/react/24/outline'
 import { FaLinkedin, FaGithub } from 'react-icons/fa' 
 
+import { Link } from 'react-scroll'
+
 const Navbar = () => {
   const [showMenu, setShowMenu ] = useState(false)
   const toggleMenu = () => setShowMenu(!showMenu)
 
-  const navLinks = ['Home','Skills','Experience','About','Contact']
+  const navLinks = ['Home','About','Skills','Work','Contact']
 
   return (
     <div className='w-full flex fixed h-20 bg-primary px-4 items-center justify-between text-gray-300'>
@@ -15,7 +17,14 @@ const Navbar = () => {
       
       <ul className='hidden md:flex gap-4'>
         {navLinks.map((route, index) => (
-          <li key={index} className='cursor-pointer'>{route}</li>
+          <li key={index} className='cursor-pointer'>
+            <Link
+              to={route.toLowerCase()}
+              smooth={true}
+              duration={500}>
+              {route}
+            </Link>
+          </li>
         ))}
       </ul>
 
@@ -29,7 +38,7 @@ const Navbar = () => {
       <ul className={`md:hidden w-full h-screen absolute flex flex-col gap-6 bg-primary top-0 left-0 items-center justify-center text-4xl ${ showMenu ? 'block' : 'hidden' }`}>
         <li className='cursor-pointer'>Home</li>
         <li className='cursor-pointer'>Skills</li>
-        <li className='cursor-pointer'>Experience</li>
+        <li className='cursor-pointer'>Work</li>
         <li className='cursor-pointer'>About</li>
         <li className='cursor-pointer'>Contact</li>
       </ul>
