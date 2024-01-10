@@ -1,6 +1,8 @@
 import React from 'react'
 
 import BudgetTravel from '../assets/budget-travel.jpg'
+import NetflixClone from '../assets/netflix-clone.png'
+import ProjectCard from './custom/ProjectCard'
 
 const Work = () => {
   return (
@@ -12,20 +14,8 @@ const Work = () => {
         </div>
 
         <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
-          <div style={{ backgroundImage: `url(${BudgetTravel})` }} 
-          className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center items-center text-center mx-auto content-div px-4'>
-            <div className='opacity-0 group-hover:opacity-100'>
-              <p className='text-2xl font-bold text-white'>Budget Travel</p>
-              <div className='pt-8 text-center flex gap-6'>
-                <a href="/">
-                <button className='text-center rounded-lg px-4 py-3 bg-white text-gray-700 font-semibold text-lg'>Demo</button>
-                </a>
-                <a href="/">
-                  <button className='text-center rounded-lg px-4 py-3 bg-white text-gray-700 font-semibold text-lg'>Code</button>
-                </a>
-              </div>
-            </div>
-          </div>
+          <ProjectCard image={BudgetTravel} title="Budget Travel" />
+          <ProjectCard image={NetflixClone} title="Netflix Clone" />
         </div>
       </div>
     </div>
