@@ -6,16 +6,20 @@ import Navbar from './components/Navbar';
 import Skills from './components/Skills';
 import Work from './components/Work';
 
+import { ThemeProvider } from "./context/ThemeContext"
+
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Work />
-      <Contact />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Work />
+        <Contact />
+      </div>
+    </ThemeProvider>
   );
 }
 

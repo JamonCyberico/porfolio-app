@@ -5,16 +5,30 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 import { Link } from 'react-scroll'
 
+import { useTheme } from '../context/ThemeContext'
+
 const Navbar = () => {
   const [showMenu, setShowMenu ] = useState(false)
   const toggleMenu = () => setShowMenu(!showMenu)
+
+  const { darkMode, toggleDarkMode } = useTheme();
 
   const navLinks = ['Home','About','Skills','Work','Contact']
 
   return (
     <div className='w-full flex fixed h-20 bg-primary px-4 items-center justify-between text-gray-300'>
-      <span className='text-4xl'>AA</span>
-      
+
+      <div className='flex items-center space-x-4'>
+        <span className='text-4xl'>AA</span>
+
+        <button 
+          className='rounded-lg px-2 py-1 font-bold text-md duration-500' 
+          onClick={toggleDarkMode}
+          style={{ backgroundColor: darkMode ? '#fff' : "#0A192F", color: darkMode ? '#0A192F' : '#fff' }}>
+          { darkMode ? 'Light Mode' : 'Dark Mode' }
+        </button>
+      </div>
+
       <ul className='hidden md:flex gap-4'>
         {navLinks.map((route, index) => (
           <li key={index} className='cursor-pointer'>
