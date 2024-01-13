@@ -36,7 +36,13 @@ const Work = () => {
         <div className='grid grid-cols-2 md:grid-cols-3 gap-4'>
           {
             projects.map((project, index) => (
-              <ProjectCard key={index} image={BudgetTravel} title={project.title} />
+              <ProjectCard 
+                key={index} 
+                image={BudgetTravel} 
+                title={project.title} 
+                codeUrl={project.code_url} 
+                demoUrl={project.demo_url}  
+                />
             ))
           }
         </div>

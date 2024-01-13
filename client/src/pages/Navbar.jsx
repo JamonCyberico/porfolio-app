@@ -7,7 +7,7 @@ import { Link } from 'react-scroll'
 
 import { useTheme } from '../context/ThemeContext'
 
-const Navbar = () => {
+const Navbar = ({ onLogout }) => {
   const [showMenu, setShowMenu ] = useState(false)
   const toggleMenu = () => setShowMenu(!showMenu)
 
@@ -27,6 +27,10 @@ const Navbar = () => {
           style={{ backgroundColor: darkMode ? '#fff' : "#0A192F", color: darkMode ? '#0A192F' : '#fff', border: darkMode ? '1px solid #0A192F' : '1px solid #fff' }}
         >
           { darkMode ? 'Light Mode' : 'Dark Mode' }
+        </button>
+
+        <button onClick={onLogout}>
+          Logout
         </button>
       </div>
 
