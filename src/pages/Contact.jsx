@@ -13,17 +13,17 @@ const Contact = () => {
           <div className='space-y-2'>
             <div className='flex flex-col gap-1 text-start'>
               <label className='text-gray-300'>Name</label>
-              <input type="text" name='name' placeholder='John Smith' className='rounded-md text-gray-300 bg-primary border2 border-gray-300 p-2'/>
+              <input className='rounded-md bg-primary text-gray-300 border-2 border-gray-300 p-2' type="text" name="name" placeholder='John Smith' />
             </div>
             
             <div className='flex flex-col gap-1 text-start'>
               <label className='text-gray-300'>Email</label>
-              <input type="email" name='email' placeholder='john@smith.com' className='rounded-md text-gray-300 bg-primary border2 border-gray-300 p-2'/>
+              <input type="email" name='email' placeholder='john@smith.com' className='rounded-md text-gray-300 bg-primary border-2 border-gray-300 p-2'/>
             </div>
 
             <div className='flex flex-col gap-1 text-start'>
               <label className='text-gray-300'>Message</label>
-              <textarea type="text" name='message' placeholder='Your message here...' className='rounded-md text-gray-300 bg-primary border2 border-gray-300 p-2'/>
+              <textarea type="text" name='message' placeholder='Your message here...' className='rounded-md text-gray-300 bg-primary border-2 border-gray-300 p-2'/>
             </div>
           </div>
 

@@ -2,7 +2,8 @@ import React from 'react'
 
 import BudgetTravel from '../assets/budget-travel.jpg'
 import NetflixClone from '../assets/netflix-clone.png'
-import ProjectCard from './custom/ProjectCard'
+
+import ProjectCard from '../components/ProjectCard'
 
 const Work = () => {
   return (

@@ -19,20 +19,22 @@ const Navbar = () => {
     <div className='w-full flex fixed h-20 bg-primary px-4 items-center justify-between text-gray-300'>
 
       <div className='flex items-center space-x-4'>
-        <span className='text-4xl'>AA</span>
+        <span className='text-3xl'>AA</span>
 
         <button 
           className='rounded-lg px-2 py-1 font-bold text-md duration-500' 
           onClick={toggleDarkMode}
-          style={{ backgroundColor: darkMode ? '#fff' : "#0A192F", color: darkMode ? '#0A192F' : '#fff' }}>
+          style={{ backgroundColor: darkMode ? '#fff' : "#0A192F", color: darkMode ? '#0A192F' : '#fff', border: darkMode ? '1px solid #0A192F' : '1px solid #fff' }}
+        >
           { darkMode ? 'Light Mode' : 'Dark Mode' }
         </button>
       </div>
 
-      <ul className='hidden md:flex gap-4'>
+      <ul className='hidden md:flex gap-4 font-light'>
         {navLinks.map((route, index) => (
           <li key={index} className='cursor-pointer'>
             <Link
+              className='hover:text-white hover:font-medium'
               to={route.toLowerCase()}
               smooth={true}
               duration={500}>
